@@ -2,7 +2,9 @@
 
 An interactive web-based Rock Paper Scissors game that uses AI and hand gesture recognition to play against an intelligent AI opponent.
 
-![Rock Paper Scissors Game](./assets/reference.png)
+| Demo | Blog|
+|------|-----|
+|[![rps-demo](https://i9.ytimg.com/vi/ZVLuXoJ_iG0/mqdefault.jpg?sqp=CJCw8sAG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGGUgTShKMA8=&rs=AOn4CLDiErNeFLfB-EEsLRSJZ-tKsVvwmA)](https://youtu.be/ZVLuXoJ_iG0?si=UIvit-7FHzuul6qZ)|[![rps-blog](https://media2.dev.to/dynamic/image/width=1000,height=420,fit=cover,gravity=auto,format=auto/https%3A%2F%2Fdev-to-uploads.s3.amazonaws.com%2Fuploads%2Farticles%2Fz63u9g1bc9k2gwtwjeph.png)](https://dev.to/abhinav-writes/building-rock-paper-scissors-game-with-ai-by-amazon-q-30pe)|
 
 ## Features
 
