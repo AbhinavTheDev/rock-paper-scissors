@@ -1,0 +1,341 @@
+/* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title div {
+  font-size: xx-large;
+  font-weight: bolder;
+
+}
+.score-container {
+  display: flex;
+  gap: 10px;
+}
+.score-header {
+  padding-top: 5px;
+  font-weight: 600;
+}
+.scoreContent {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  background-color: #dee2e3;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 5px;
+}
+.scoreContent span {
+  padding-left: 5px;
+}
+/* Game Area Styles */
+.game-area {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Player Section Styles */
+.player-section {
+  width: 48%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+/* Video Container Styles */
+.video-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 3px solid #3498db;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.ai-container {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  border: 3px solid #e74c3c;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-img {
+  position: absolute;
+  bottom: 0;
+  width: 30%;
+}
+#output-canvas {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#output-canvas {
+  z-index: 10;
+}
+.gamePrediction {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+}
+.aiPrediction {
+  display: flex;
+  justify-content: end;
+  width: 100%;
+  padding: 8px;
+  font-size: 14;
+}
+#user-move-display span {
+  color: #7c8183;
+  font-size: 12px;
+}
+#user-move-display, #ai-move-display {
+  font-weight: 600;
+}
+#user-move-display {
+  color: rgb(0, 0, 0);
+  padding: 10px;
+  font-size: 14px;
+}
+#aiContainerTitle {
+  top: 0;
+  color: rgb(0, 0, 0);
+}
+#vidContainerTitle {
+  color: #2f80ed;
+}
+#aiContainerTitle,
+#vidContainerTitle {
+  font-weight: 900;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  font-size: 25px;
+}
+/* Game Info Styles */
+.game-info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Move Display Styles */
+
+.move-img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Result Display Styles */
+#result-display {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  min-height: 60px;
+  min-width: 200px;
+}
+
+
+/* Countdown Display Styles */
+.display {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #2f80ed;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button Styles */
+.buttons {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
+  gap: 15px;
+  margin-left: 500px;
+  /* margin-top: 70px; */
+  width: 48%;
+  height: auto;
+  min-height: 300px;
+  padding: 15px 0;
+  /* background-color: #f8f9fa; */
+  border-radius: 10px;
+  /* box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); */
+  position: absolute;
+  z-index: 10;
+}
+#play-again-btn {
+  display: none;
+  background-color: green;
+}
+.btn {
+  /* align-self: center; */
+  font-size: x-large;
+  width: 30%;
+  font-family: Georgia, 'Times New Roman', Times, serif, sans-serif;
+  padding: 16px 20px;
+  border: 2px solid white;
+  border-radius: 35px;
+  background-color: #3498db;
+  color: white;
+  /* font-size: 1.4rem; */
+  font-weight: bolder;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #2980b9;
+}
+
+.btn:disabled {
+  background-color: #3498db;
+  cursor: not-allowed;
+}
+
+/* Footer Styles */
+footer {
+  width: 100%;
+  background-color: #dee2e3;
+  padding: 10px 0;
+  margin-top: auto;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  color: #555;
+  font-size: 14px;
+}
+
+.footer-content a {
+  color: #000000;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-content a:hover {
+  text-decoration: underline;
+}
+
+.footer-content img {
+  margin-left: 5px;
+  vertical-align: middle;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .game-area {
+    flex-direction: column;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  .player-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .video-container,
+  .ai-container {
+    height: 250px;
+  }
+
+  .game-info {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .video-container,
+  .ai-container {
+    height: 200px;
+  }
+
+  .buttons {
+    width: 50%;
+    flex-direction: column;
+    margin-top: 70px;
+    margin-left: 50px;
+    /* align-items: center; */
+  }
+
+  .btn {
+    width: 80%;
+  }
+  
+  footer {
+    position: relative;
+    bottom: 0;
+  }
+}
+
+.win {
+  color: #3498db;
+}
+
+.tie {
+  color: rgba(8, 119, 129, 0.642);
+}
+
+.lose {
+  color: rgba(177, 50, 8, 0.774);
+}

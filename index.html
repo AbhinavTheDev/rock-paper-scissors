@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rock Paper Scissors Game</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://unpkg.com/@tensorflow/tfjs-core@3.7.0/dist/tf-core.js"></script>
+    <!-- You must explicitly require a TF.js backend if you're not using the tfs union bundle. -->
+    <script src="https://unpkg.com/@tensorflow/tfjs-backend-webgl@3.7.0/dist/tf-backend-webgl.js"></script>
+    <!-- The main handpose library -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/hand-pose-detection@2.0.0/dist/hand-pose-detection.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands@0.4.1646424915/hands.min.js"></script>
+    <!-- Fingerpose -->
+    <script src="https://cdn.jsdelivr.net/npm/fingerpose@0.1.0/dist/fingerpose.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="title">
+          <div>Rock Paper Scissors</div>
+        </div>
+        <div class="score-container">
+          <div class="score-header">Overall Score</div>
+          <div class="scoreContent">
+            <span id="user-score" class="score">0</span>
+            <span>-</span>
+            <span id="ai-score" class="score">0</span>
+          </div>
+        </div>
+      </header>
+      <main>
+        <!-- Score Container moved to top -->
+        <div class="game-info">
+          <div id="display" class="display">Let's Play!</div>
+        </div>
+
+        <div class="game-area">
+          <div class="player-section">
+            <div class="video-container">
+              <div id="vidContainerTitle">
+                <div>Player</div>
+                <div id="user-score-2">0</div>
+              </div>
+              <video id="webcam" autoplay playsinline></video>
+              <canvas id="output-canvas"></canvas>
+            </div>
+            <div class="gamePrediction">
+              <div id="user-move-display"></div>
+            </div>
+          </div>
+
+          <div class="buttons">
+            <button id="start-btn" class="btn">Start Game</button>
+            <button id="play-again-btn" class="btn">Play Again</button>
+          </div>
+          <div class="player-section">
+            <!-- <h3>AI's Move</h3> -->
+            <!-- <img id="ai-move-img" src="" alt="" class="move-img hidden"> -->
+            <div class="ai-container">
+              <div id="aiContainerTitle">
+                <div>AI</div>
+                <div id="ai-score-2">0</div>
+              </div>
+              <img src="./assets/background.png" alt="" />
+              <img
+                src="./assets/horns2.png"
+                alt=""
+                id="ai-move-img"
+                class="overlay-img"
+              />
+            </div>
+            <div class="aiPrediction">
+              <div id="ai-move-display"></div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer>
+          <div class="footer-content">
+            Coded by
+            <a target="_blank" href="https://github.com/abhinavthedev"
+              >Abhinav</a
+            >
+            using Amazon Q
+            <img
+              src="./assets/q-logo.svg"
+              alt="q-logo"
+              width="24"
+              height="24"
+            />
+          </div>
+      </footer>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
